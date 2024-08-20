@@ -5,11 +5,8 @@ import Bingo from "./pages/Bingo.jsx";
 import Header from "./components/Header";
 import Navbar from "./components/Navbar.jsx";
 import "./App.css";
-import items from "./constants/items_array";
 
 function App() {
-  const [count, setCount] = useState(0);
-  console.log(items[0].name);
   return (
     <>
       <Navbar />
