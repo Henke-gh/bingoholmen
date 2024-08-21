@@ -2,6 +2,13 @@ import { useState, useEffect } from "react";
 import BingoSquare from "./BingoSquare";
 
 export default function BingoCard({ bingo, onReshuffle }) {
+  // state management for showing/hiding modal
+  const [showTileBackModal, setShowTileBackModal] = useState(false);
+
+  // state management for text shown in modal & modal className (for styling purposes)
+  const [modalText, setModalText] = useState("");
+  const [modalClass, setModalClass] = useState("");
+
   // sets state for which tiles are clicked and which combinations will win based on tile's name
   const [clickedTiles, setClickedTiles] = useState([]);
   const [winningCombinations, setWinningCombinations] = useState([]);
@@ -46,6 +53,10 @@ export default function BingoCard({ bingo, onReshuffle }) {
   };
 
   const handleTileClick = (name) => {
+    setModalClass("bingoBack");
+    let tile = bingo.find((item) => item.name == name);
+    setModalText(tile.text);
+    setShowTileBackModal(true);
     setClickedTiles((prev) => {
       let newClickedTiles;
       if (prev.includes(name)) {
@@ -57,6 +68,7 @@ export default function BingoCard({ bingo, onReshuffle }) {
       return newClickedTiles;
     });
   };
+
   const checkForWin = (clickedTiles) => {
     for (let i = 0; i < winningCombinations.length; i++) {
       const combination = winningCombinations[i];
@@ -71,7 +83,10 @@ export default function BingoCard({ bingo, onReshuffle }) {
       }
 
       if (allTilesClicked) {
-        alert("BINGO BONGO!");
+        /* alert("BINGO BONGO!"); */
+        setModalText("BINGO BONGO!");
+        setModalClass("bingobongo");
+        setShowTileBackModal(true);
         setClickedTiles([]); // reset the clicked tiles
         break;
       }
@@ -85,11 +100,41 @@ export default function BingoCard({ bingo, onReshuffle }) {
           key={index}
           icon={tile.icon}
           name={tile.name}
+          text={tile.text}
+          location={tile.location ? tile.location : ""}
           onClick={handleTileClick}
           isClicked={clickedTiles.includes(tile.name)}
         />
       ))}
       <button onClick={onReshuffle}>Reshuffle Tiles</button>
+      <button onClick={() => setShowTileBackModal(true)}>Show modal</button>
+
+      {showTileBackModal && <div className="overlay"></div>}
+      {showTileBackModal && (
+        <div
+          className={modalClass}
+          style={{
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+            backgroundColor: "#0066cc",
+            borderRadius: "15px",
+            color: "#eeeeee",
+            padding: "10px",
+            zIndex: 2,
+          }}
+        >
+          <p>{modalText}</p>
+          <button
+            onClick={() => {
+              setShowTileBackModal(false);
+            }}
+          >
+            Play again
+          </button>
+        </div>
+      )}
     </div>
   );
 }
