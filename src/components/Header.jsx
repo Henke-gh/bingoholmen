@@ -1,7 +1,7 @@
 export default function Header() {
   return (
     <>
-      <h1>Binghoholmen (detta blir en cool logga)</h1>
+      <img src="bingoholmen_logo.svg" />
     </>
   );
 }
