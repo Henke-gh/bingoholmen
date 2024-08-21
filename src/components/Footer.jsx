@@ -2,7 +2,7 @@ export default function Footer() {
   return (
     <>
       <div className="footer">
-        <h1>En upplevelse av YRGO</h1>
+        <h2>En upplevelse av YRGO</h2>
         <p>2024</p>
       </div>
     </>

@@ -1,5 +1,4 @@
 #root {
-  margin: 0 auto;
   display: flex;
 }
 
@@ -7,10 +6,18 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  height: 100vh;
+  gap: 3.75rem;
+  margin-top: 32%;
 }
 
 .footer {
   display: flex;
   flex-direction: row;
   align-items: baseline;
+  color: var(--bongo-purple);
+  gap: 0.3rem;
+  margin-top: auto;
+  margin-bottom: 10%;
 }
