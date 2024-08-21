@@ -5,6 +5,7 @@
   --bongo-tile: #f8ecfd;
   --bongo-tile-clicked: #c89eff;
   --bongo-border: 3px solid var(--bongo-purple);
+  --bongo-font: "Jockey One", serif;
 }
 
 * {
@@ -29,6 +30,7 @@ body {
   width: 100vw;
   padding: 0;
   background-color: var(--bongo-bg-gradient);
+  font-family: var(--bongo-font);
 }
 
 .navbar {
