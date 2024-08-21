@@ -85,6 +85,8 @@ export default function BingoCard({ bingo, onReshuffle }) {
           key={index}
           icon={tile.icon}
           name={tile.name}
+          text={tile.text}
+          location={tile.location ? tile.location : ""}
           onClick={handleTileClick}
           isClicked={clickedTiles.includes(tile.name)}
         />
