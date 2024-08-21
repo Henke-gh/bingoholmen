@@ -5,17 +5,13 @@ import { useNavigate } from "react-router-dom";
 import Footer from "../components/Footer.jsx";
 import Header from "../components/Header.jsx";
 
-export default function Home() {
+export default function Home({ toggleInfoModal }) {
   const navigate = useNavigate();
 
   const clickStartGame = () => {
     navigate("./bingo");
   };
 
-  /* 
-  const clickAbout = () => {
-    //open About-overlay
-  }; */
   return (
     <div className="homeContainer">
       <Header />
@@ -39,7 +35,8 @@ export default function Home() {
             color: "var(--bongo-yellow)",
             fontFamily: "var(--bongo-font)",
             fontSize: "2.8rem",
-          }}>
+          }}
+          onClick={toggleInfoModal}>
           OM SPELET
         </Button>
       </Stack>
