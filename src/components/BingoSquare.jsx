@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Icecream } from "@mui/icons-material";
 
 export default function BingoSquare({ icon, name, onClick, isClicked }) {
   const handleClick = () => {
@@ -10,6 +11,7 @@ export default function BingoSquare({ icon, name, onClick, isClicked }) {
       className={`bingoTile ${isClicked ? "clicked" : ""}`}
       onClick={handleClick}
     >
+      <Icecream />
       <img src={icon} alt={name} />
       <p>{name}</p>
     </div>
