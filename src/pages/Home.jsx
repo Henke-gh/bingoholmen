@@ -13,34 +13,38 @@ export default function Home({ toggleInfoModal }) {
   };
 
   return (
-    <div className="homeContainer">
-      <Header />
-      <Stack direction="column" spacing={6} sx={{ width: "75%" }}>
-        <Button
-          variant="contained"
-          sx={{
-            backgroundColor: "var(--bongo-purple)",
-            color: "var(--bongo-yellow)",
-            fontFamily: "var(--bongo-font)",
-            fontSize: "2.8rem",
-            width: "100%",
-          }}
-          onClick={clickStartGame}>
-          START
-        </Button>
-        <Button
-          variant="contained"
-          sx={{
-            backgroundColor: "var(--bongo-purple)",
-            color: "var(--bongo-yellow)",
-            fontFamily: "var(--bongo-font)",
-            fontSize: "2.8rem",
-          }}
-          onClick={toggleInfoModal}>
-          OM SPELET
-        </Button>
-      </Stack>
-      <Footer />
+    <div>
+      <div className="homeContainer">
+        <Header />
+        <Stack direction="column" spacing={6} sx={{ width: "75%" }}>
+          <Button
+            variant="contained"
+            sx={{
+              backgroundColor: "var(--bongo-purple)",
+              color: "var(--bongo-yellow)",
+              fontFamily: "var(--bongo-font)",
+              fontSize: "2rem",
+              width: "100%",
+            }}
+            onClick={clickStartGame}>
+            START
+          </Button>
+          <Button
+            variant="contained"
+            sx={{
+              backgroundColor: "var(--bongo-purple)",
+              color: "var(--bongo-yellow)",
+              fontFamily: "var(--bongo-font)",
+              fontSize: "2rem",
+            }}
+            onClick={toggleInfoModal}>
+            OM SPELET
+          </Button>
+        </Stack>
+      </div>
+      <div className="footerContainer">
+        <Footer />
+      </div>
     </div>
   );
 }
