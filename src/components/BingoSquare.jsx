@@ -7,7 +7,7 @@ export default function BingoSquare({ icon, name, onClick, isClicked }) {
 
   return (
     <div
-      className={`bingoSquare ${isClicked ? "clicked" : ""}`}
+      className={`bingoTile ${isClicked ? "clicked" : ""}`}
       onClick={handleClick}
     >
       <img src={icon} alt={name} />
