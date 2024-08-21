@@ -21,3 +21,42 @@
   margin-top: auto;
   margin-bottom: 10%;
 }
+
+.infoModal {
+  position: absolute;
+  top: 10%;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  height: 90vh;
+  width: 100%;
+  z-index: 50;
+}
+
+.infoModalSection {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bongo-purple);
+  color: var(--bongo-yellow);
+  width: 85%;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 10px;
+}
+
+.infoModalHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.infoNameParagraph {
+  margin: 0;
+  text-align: center;
+}
