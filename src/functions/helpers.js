@@ -1,4 +1,3 @@
-import { build } from "vite";
 import buildings from "../constants/buildings_array";
 import items from "../constants/items_array";
 
@@ -29,5 +28,7 @@ export function createBingoTiles() {
     tilesArray.push(shuffledItems[j]);
   }
 
-  return tilesArray;
+  let shuffledTilesArray = shuffle(tilesArray);
+
+  return shuffledTilesArray;
 }

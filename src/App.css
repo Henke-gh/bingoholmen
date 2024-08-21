@@ -1,4 +1,4 @@
-#root {
+/* #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
@@ -39,4 +39,29 @@
 
 .read-the-docs {
   color: #888;
+} */
+
+/**/
+
+.root {
+  margin: 0 auto;
+}
+
+.bingoWrapper {
+  width: 100vw;
+  height: 500px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.bingoSquare {
+  width: calc(33%);
+  height: calc(33%);
+  border-radius: 10px;
+  background-color: aquamarine;
+}
+
+.bingoSquare.clicked {
+  background-color: cadetblue;
 }
