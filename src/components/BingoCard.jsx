@@ -7,11 +7,15 @@ export default function BingoCard({ bingo, onReshuffle }) {
 
   // state management for text shown in modal & modal className (for styling purposes)
   const [modalText, setModalText] = useState("");
+  const [modalTitle, setModalTitle] = useState("");
   const [modalClass, setModalClass] = useState("");
 
   // sets state for which tiles are clicked and which combinations will win based on tile's name
   const [clickedTiles, setClickedTiles] = useState([]);
   const [winningCombinations, setWinningCombinations] = useState([]);
+
+  // sets game as won
+  const [bingoAchieved, setBingoAchieved] = useState(false);
 
   useEffect(() => {
     setWinningCombinations(generateWinningCombinations(bingo));
@@ -56,6 +60,7 @@ export default function BingoCard({ bingo, onReshuffle }) {
     setModalClass("bingoBack");
     let tile = bingo.find((item) => item.name == name);
     setModalText(tile.text);
+    setModalTitle(tile.name);
     setShowTileBackModal(true);
     setClickedTiles((prev) => {
       let newClickedTiles;
@@ -84,7 +89,9 @@ export default function BingoCard({ bingo, onReshuffle }) {
 
       if (allTilesClicked) {
         /* alert("BINGO BONGO!"); */
-        setModalText("BINGO BONGO!");
+        setBingoAchieved(true);
+        setModalText("");
+        setModalTitle("");
         setModalClass("bingobongo");
         setShowTileBackModal(true);
         setClickedTiles([]); // reset the clicked tiles
@@ -111,21 +118,11 @@ export default function BingoCard({ bingo, onReshuffle }) {
 
       {showTileBackModal && <div className="overlay"></div>}
       {showTileBackModal && (
-        <div
-          className={modalClass}
-          style={{
-            position: "absolute",
-            top: "50%",
-            left: "50%",
-            transform: "translate(-50%, -50%)",
-            backgroundColor: "#0066cc",
-            borderRadius: "15px",
-            color: "#eeeeee",
-            padding: "10px",
-            zIndex: 2,
-          }}
-        >
-          <p>{modalText}</p>
+        <div className={modalClass}>
+          <p className="modalTitle">{modalTitle}</p>
+          <p className="modalText">{modalText}</p>
+          {bingoAchieved && <img src="../public/bingobongo.svg"></img>}
+
           <button
             onClick={() => {
               setShowTileBackModal(false);

@@ -1,5 +1,10 @@
 :root {
   --bongo-bg-gradient: linear-gradient(180deg, #e7b7fd 59.17%, #f2d8ff 100%);
+  --bingoback-bg-gradient: linear-gradient(
+    180deg,
+    #fbf1ff 59.17%,
+    #f2d8ff 100%
+  );
   --bongo-purple: #6b0e97;
   --bongo-yellow: #ffc700;
   --bongo-tile: #f8ecfd;
@@ -14,7 +19,10 @@
 
 #root {
   height: 100vh;
+  display: flex;
   flex-direction: column;
+  justify-content: center;
+  position: relative;
 }
 
 body {
@@ -36,7 +44,8 @@ body {
   border-radius: 2px 2px 30px 30px;
   background-color: var(--bongo-purple);
   position: absolute;
-  z-index: 99;
+  top: 0;
+  z-index: 50;
 }
 
 .bingoWrapper {
@@ -57,4 +66,46 @@ body {
 
 .bingoTile.clicked {
   background-color: var(--bongo-tile-clicked);
+}
+
+/* MODAL */
+
+.bingoBack,
+.bingobongo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+  padding: 21px 12px;
+  z-index: 2;
+  max-height: 644px;
+  height: 80%;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.bingoBack {
+  background: var(--bingoback-bg-gradient);
+}
+
+.bingoBack > p.modalTitle {
+  color: var(--bongo-purple);
+}
+
+.bingoBack > p.modalText {
+  color: #000;
+}
+
+.bingobongo {
+  background-color: none;
+}
+
+.overlay {
+  background-color: #e7b7fd;
+  opacity: 80%;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  z-index: 2;
 }
