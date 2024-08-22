@@ -15,6 +15,7 @@
   --bongo-bread: "Krub", sans-serif;
   --bongo-bullet-dark: rgb(231, 183, 253);
   --bongo-bullet-light: rgb(236, 195, 255);
+  --bongo-button-selected: rgba(255, 199, 0, 0.3);
 }
 
 * {
@@ -63,13 +64,24 @@ body {
 }
 
 .navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   width: 100vw;
   height: 72px;
-  border-radius: 2px 2px 30px 30px;
+  border-radius: 0px 0px 25px 25px;
   background-color: var(--bongo-purple);
   position: absolute;
   top: 0;
   z-index: 50;
+}
+
+.navHeader {
+  color: var(--bongo-yellow);
+  padding-left: 20px;
+  padding-right: 20px;
+  border-left: 7px solid var(--bongo-yellow);
+  border-right: 7px solid var(--bongo-yellow);
 }
 
 /* BINGO */

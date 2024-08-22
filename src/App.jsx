@@ -16,8 +16,11 @@ function App() {
 
   return (
     <>
-      <Navbar />
       <BrowserRouter>
+        <Navbar
+          toggleInfoModal={toggleInfoModal}
+          showInfoModal={showInfoModal}
+        />
         <Routes>
           <Route
             path="/"
