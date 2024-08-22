@@ -96,7 +96,7 @@ const items = [
   },
   {
     name: "SKULPTUR “Polaren”",
-    icon: "Diversity3Icon",
+    icon: "Diversity3",
     text: "Av Charles Brånå på Lindholmen ser ut att vara hämtad från en science fiction-film eller som något som lämnats kvar efter ett besök av utomjordingar. Stycka upp en rund glob i sex skivor och dra sedan isär delarna via en mittaxel, så uppstår denna ovala form.",
   },
 ];
