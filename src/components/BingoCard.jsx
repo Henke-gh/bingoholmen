@@ -162,7 +162,6 @@ export default function BingoCard({ bingo, onReshuffle }) {
           </div>
         )}
       </div>
-
       <button className="refreshBtn" onClick={handleCloseWinModal}>
         <img src="refresh.svg" alt="Nya brickor"></img>
       </button>
