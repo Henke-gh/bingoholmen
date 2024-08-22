@@ -4,6 +4,7 @@ import BingoSquare from "./BingoSquare";
 export default function BingoCard({ bingo, onReshuffle }) {
   // state management for showing/hiding modal
   const [showTileBackModal, setShowTileBackModal] = useState(false);
+  const [showWinModal, setShowWinModal] = useState(false);
 
   // state management for text shown in modal & modal className (for styling purposes)
   const [modalText, setModalText] = useState("");
@@ -16,6 +17,7 @@ export default function BingoCard({ bingo, onReshuffle }) {
 
   // sets game as won
   const [bingoAchieved, setBingoAchieved] = useState(false);
+  const [winConditionMet, setWinConditionMet] = useState(false);
 
   useEffect(() => {
     setWinningCombinations(generateWinningCombinations(bingo));
@@ -88,16 +90,27 @@ export default function BingoCard({ bingo, onReshuffle }) {
       }
 
       if (allTilesClicked) {
-        /* alert("BINGO BONGO!"); */
+        setWinConditionMet(true);
         setBingoAchieved(true);
-        setModalText("");
-        setModalTitle("");
-        setModalClass("bingobongo");
-        setShowTileBackModal(true);
-        setClickedTiles([]); // reset the clicked tiles
         break;
       }
     }
+  };
+
+  const handleCloseModal = () => {
+    if (winConditionMet) {
+      setShowTileBackModal(false);
+      setShowWinModal(true);
+      setWinConditionMet(false);
+    } else {
+      setShowTileBackModal(false);
+    }
+  };
+
+  const handleCloseWinModal = () => {
+    setShowWinModal(false);
+    setClickedTiles([]); // reset the clicked tiles
+    onReshuffle(); // reshuffle tiles for new game
   };
 
   return (
@@ -121,15 +134,15 @@ export default function BingoCard({ bingo, onReshuffle }) {
         <div className={modalClass}>
           <p className="modalTitle">{modalTitle}</p>
           <p className="modalText">{modalText}</p>
-          {bingoAchieved && <img src="../public/bingobongo.svg"></img>}
+          <button onClick={handleCloseModal}>Close</button>
+        </div>
+      )}
 
-          <button
-            onClick={() => {
-              setShowTileBackModal(false);
-            }}
-          >
-            Play again
-          </button>
+      {showWinModal && <div className="overlay"></div>}
+      {showWinModal && (
+        <div className="bingobongo">
+          <img src="../public/bingobongo.svg" alt="Bingo Bongo" />
+          <button onClick={handleCloseWinModal}>Play again</button>
         </div>
       )}
     </div>
