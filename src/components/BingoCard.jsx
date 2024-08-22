@@ -114,37 +114,40 @@ export default function BingoCard({ bingo, onReshuffle }) {
   };
 
   return (
-    <div className="bingoWrapper">
-      {bingo.map((tile, index) => (
-        <BingoSquare
-          key={index}
-          icon={tile.icon}
-          name={tile.name}
-          text={tile.text}
-          location={tile.location ? tile.location : ""}
-          onClick={handleTileClick}
-          isClicked={clickedTiles.includes(tile.name)}
-        />
-      ))}
-      <button onClick={onReshuffle}>Reshuffle Tiles</button>
-      <button onClick={() => setShowTileBackModal(true)}>Show modal</button>
+    <>
+      <h1 className="bingoHeadline">HITTA</h1>
+      <div className="bingoWrapper">
+        {bingo.map((tile, index) => (
+          <BingoSquare
+            key={index}
+            icon={tile.icon}
+            name={tile.name}
+            text={tile.text}
+            location={tile.location ? tile.location : ""}
+            onClick={handleTileClick}
+            isClicked={clickedTiles.includes(tile.name)}
+          />
+        ))}
+        <button onClick={onReshuffle}>Reshuffle Tiles</button>
+        <button onClick={() => setShowTileBackModal(true)}>Show modal</button>
 
-      {showTileBackModal && <div className="overlay"></div>}
-      {showTileBackModal && (
-        <div className={modalClass}>
-          <p className="modalTitle">{modalTitle}</p>
-          <p className="modalText">{modalText}</p>
-          <button onClick={handleCloseModal}>Close</button>
-        </div>
-      )}
+        {showTileBackModal && <div className="overlay"></div>}
+        {showTileBackModal && (
+          <div className={modalClass}>
+            <p className="modalTitle">{modalTitle}</p>
+            <p className="modalText">{modalText}</p>
+            <button onClick={handleCloseModal}>Close</button>
+          </div>
+        )}
 
-      {showWinModal && <div className="overlay"></div>}
-      {showWinModal && (
-        <div className="bingobongo">
-          <img src="bingobongo.svg" alt="Bingo Bongo" />
-          <button onClick={handleCloseWinModal}>Play again</button>
-        </div>
-      )}
-    </div>
+        {showWinModal && <div className="overlay"></div>}
+        {showWinModal && (
+          <div className="bingobongo">
+            <img src="bingobongo.svg" alt="Bingo Bongo" />
+            <button onClick={handleCloseWinModal}>Play again</button>
+          </div>
+        )}
+      </div>
+    </>
   );
 }
