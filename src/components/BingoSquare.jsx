@@ -1,5 +1,6 @@
 import { useState, createElement } from "react";
 import * as Icons from "@mui/icons-material";
+import CloseIcon from "@mui/icons-material/Close";
 
 export default function BingoSquare({
   icon,
