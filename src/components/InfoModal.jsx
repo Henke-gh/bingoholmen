@@ -4,17 +4,25 @@ import CircleIcon from "@mui/icons-material/Circle";
 export default function InfoModal({ toggleInfoModal }) {
   return (
     <div className="infoModal">
-      <div className="infoModalSection">
+      <div className="infoModalSection" id="topInfoSection">
         <div className="infoModalHeader">
           <CircleIcon
-            sx={{ fill: "var(--bongo-tile)", width: "1rem", height: "1rem" }}
+            sx={{
+              fill: "var(--bongo-bullet-dark)",
+              width: "1rem",
+              height: "1rem",
+            }}
           />
           <h1 className="mediumFontHeader">SÅHÄR SPELAR DU</h1>
           <CircleIcon
-            sx={{ fill: "var(--bongo-tile)", width: "1rem", height: "1rem" }}
+            sx={{
+              fill: "var(--bongo-bullet-dark)",
+              width: "1rem",
+              height: "1rem",
+            }}
           />
         </div>
-        <article>
+        <article className="infoText">
           <p className="twelvePX">
             I detta bingospel letar du efter objekt eller platser utspridda på
             Lindholmen. När du hittar objektet eller platsen, klickar du på dess
@@ -27,17 +35,25 @@ export default function InfoModal({ toggleInfoModal }) {
           </p>
         </article>
       </div>
-      <div className="infoModalSection">
+      <div className="infoModalSection" id="bottomInfoSection">
         <div className="infoModalHeader">
           <CircleIcon
-            sx={{ fill: "var(--bongo-tile)", width: "1rem", height: "1rem" }}
+            sx={{
+              fill: "var(--bongo-bullet-light)",
+              width: "1rem",
+              height: "1rem",
+            }}
           />
           <h1 className="mediumFontHeader">GJORD AV</h1>
           <CircleIcon
-            sx={{ fill: "var(--bongo-tile)", width: "1rem", height: "1rem" }}
+            sx={{
+              fill: "var(--bongo-bullet-light)",
+              width: "1rem",
+              height: "1rem",
+            }}
           />
         </div>
-        <article>
+        <article className="infoText">
           <p className="infoNameParagraph twelvePX">
             Jakob Tamm: Research & Manus
           </p>
