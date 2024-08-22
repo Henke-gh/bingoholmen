@@ -18,9 +18,9 @@ export default function BingoSquare({
       className={`bingoTile ${isClicked ? "clicked" : ""}`}
       onClick={handleClick}
     >
+      <p className="tileName">{name}</p>
       <Icecream />
       <img src={icon} alt={name} />
-      <p>{name}</p>
       <p>{location}</p>
     </div>
   );
