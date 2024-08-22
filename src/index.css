@@ -3,17 +3,72 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  gap: 3.75rem;
+  height: 78%;
   margin-top: 32%;
+  gap: 2%;
+}
+
+.footerContainer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }
 
 .footer {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   align-items: baseline;
   color: var(--bongo-purple);
   gap: 0.3rem;
   margin-top: auto;
   margin-bottom: 10%;
+}
+
+.infoModal {
+  position: absolute;
+  top: 15%;
+  background: var(--bongo-bg-gradient);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  height: calc(100% - 80px);
+  width: 100%;
+  z-index: 50;
+}
+
+.infoModalSection {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bongo-purple);
+  color: var(--bongo-yellow);
+  width: 85%;
+  padding-top: 1%;
+  padding-bottom: 1.5%;
+  padding-left: 3%;
+  padding-right: 3%;
+  border-radius: 10px;
+}
+
+.infoModalHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.infoNameParagraph {
+  margin: 0;
+  text-align: center;
+}
+
+.twelvePX {
+  font-size: 12px;
+}
+
+.mediumFontHeader {
+  font-size: 16px;
 }
