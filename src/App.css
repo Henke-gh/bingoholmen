@@ -11,6 +11,9 @@
   --bongo-tile-clicked: #c89eff;
   --bongo-border: 3px solid var(--bongo-purple);
   --bongo-font: "Jockey One", serif;
+  --bongo-bread: "Krub", sans-serif;
+  --bongo-bullet-dark: rgb(231, 183, 253);
+  --bongo-bullet-light: rgb(236, 195, 255);
 }
 
 * {

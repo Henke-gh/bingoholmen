@@ -27,7 +27,7 @@
 
 .infoModal {
   position: absolute;
-  top: 0;
+  top: 72px;
   background: var(--bongo-bg-gradient);
   display: flex;
   flex-direction: column;
@@ -35,6 +35,7 @@
   align-items: center;
   gap: 0.5rem;
   width: 100%;
+  height: calc(100% - 72px);
   z-index: 40;
 }
 
@@ -45,10 +46,26 @@
   color: var(--bongo-yellow);
   width: 85%;
   padding-top: 1%;
-  padding-bottom: 1.5%;
-  padding-left: 3%;
-  padding-right: 3%;
+  padding-bottom: 2.5%;
+  padding-left: 4%;
+  padding-right: 4%;
   border-radius: 10px;
+}
+
+.infoText {
+  font-family: var(--bongo-bread);
+}
+
+#topInfoSection {
+  width: 80%;
+  height: fit-content;
+  max-height: 35%;
+}
+
+#bottomInfoSection {
+  width: 80%;
+  height: fit-content;
+  max-height: 30%;
 }
 
 .infoModalHeader {
