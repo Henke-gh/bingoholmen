@@ -25,19 +25,19 @@ const buildings = [
   },
   {
     name: "Aftonstjärnan",
-    icon: "​​StarBorderIcon",
+    icon: "StarBorderIcon",
     text: "Föreningen Aftonstjärnan föddes 1892 när unga varvsarbetare behövde en plats att samlas på och diskutera viktiga frågor. Det ledde till att de bildade ett teatersällskap och huset byggdes om för att ha en scen. Efter en brand 1902 byggdes huset upp igen och blev det första huset på Lindholmen som hade elektricitet. Vilket öppnade för möjligheten att börja med filmvisningar.",
     location: "Plåtslagaregatan 2",
   },
   {
     name: "Port Arthur",
-    icon: "​​LocalDiningIcon",
+    icon: "LocalDiningIcon",
     text: "Port Arthur är en hamnkrog som det pratades om i hamnar jorden runt. Här samlades hamnarbetare och sjöfolk och det kunde gå vilt till. Krogen har brunnit vid ett par tillfällen och byggdes upp från grunden och kunde öppnas igen 1997 av Catharina Olesen, som blev ägare efter att hon hört talas om krogen när hon var till sjöss.",
     location: "Gamla Ceresgatan 3",
   },
   {
     name: "Max",
-    icon: "​​FastfoodIcon",
+    icon: "FastfoodIcon",
     text: "Max på Lindholmen öppnade så sent som i oktober 2020. Den första Max-restaurangen öppnade 1968 i Gällivare. Den är idag en av alla 150 plus Max-restauranger i Sverige.",
     location: "Polstjärnegatan 9A",
   },
