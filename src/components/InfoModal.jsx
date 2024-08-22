@@ -60,10 +60,8 @@ export default function InfoModal({ toggleInfoModal }) {
           <p className="infoNameParagraph twelvePX">
             Simon Axelsson: Research & Manus
           </p>
-          <p className="infoNameParagraph twelvePX">Liv Oschlag: Webb-Dev</p>
-          <p className="infoNameParagraph twelvePX">
-            Henrik Andersen: Webb-Dev
-          </p>
+          <p className="infoNameParagraph twelvePX">Liv Oschlag: Web Dev</p>
+          <p className="infoNameParagraph twelvePX">Henrik Andersen: Web Dev</p>
           <p className="infoNameParagraph twelvePX">John Hamrin: UX-Design</p>
           <p className="infoNameParagraph twelvePX">Madeleine Ek: UX-Design</p>
           <p className="infoNameParagraph twelvePX">
@@ -80,7 +78,8 @@ export default function InfoModal({ toggleInfoModal }) {
           fontSize: "14px",
           width: "70%",
         }}
-        onClick={toggleInfoModal}>
+        onClick={toggleInfoModal}
+      >
         STÄNG
       </Button>
     </div>
