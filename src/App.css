@@ -44,6 +44,11 @@
   text-align: center;
 }
 
+.homeWrapperBigContainer {
+  position: absolute;
+  top: 25%;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -174,6 +179,7 @@ body {
 .bingoBack {
   background: var(--bingoback-bg-gradient);
   box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  height: auto;
 }
 
 .bingoBackWrapper {
@@ -198,6 +204,7 @@ p.modalTitle {
 p.modalText {
   color: #000;
   font-family: var(--bongo-bread);
+  padding-bottom: 50px;
 }
 
 .bingoBackIcon {
