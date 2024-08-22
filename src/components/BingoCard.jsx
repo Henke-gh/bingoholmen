@@ -1,5 +1,7 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, createElement } from "react";
 import BingoSquare from "./BingoSquare";
+import * as Icons from "@mui/icons-material";
+import CloseIcon from "@mui/icons-material/Close";
 
 export default function BingoCard({ bingo, onReshuffle }) {
   // state management for showing/hiding modal
@@ -9,7 +11,10 @@ export default function BingoCard({ bingo, onReshuffle }) {
   // state management for text shown in modal & modal className (for styling purposes)
   const [modalText, setModalText] = useState("");
   const [modalTitle, setModalTitle] = useState("");
+  const [modalIcon, setModalIcon] = useState("");
   const [modalClass, setModalClass] = useState("");
+  const [IconComponent, setIconComponent] = useState(null);
+  const [iconProps, setIconProps] = useState({});
 
   // sets state for which tiles are clicked and which combinations will win based on tile's name
   const [clickedTiles, setClickedTiles] = useState([]);
@@ -63,6 +68,12 @@ export default function BingoCard({ bingo, onReshuffle }) {
     let tile = bingo.find((item) => item.name == name);
     setModalText(tile.text);
     setModalTitle(tile.name);
+    setModalIcon(tile.icon);
+    setIconComponent(Icons[tile.icon]);
+    setIconProps({
+      className: "bingoBackIcon",
+      style: { fontSize: "58px" },
+    });
     setShowTileBackModal(true);
     setClickedTiles((prev) => {
       let newClickedTiles;
@@ -114,7 +125,7 @@ export default function BingoCard({ bingo, onReshuffle }) {
   };
 
   return (
-    <>
+    <div className="bingoWrapperBigContainer">
       <h1 className="bingoHeadline">HITTA</h1>
       <div className="bingoWrapper">
         {bingo.map((tile, index) => (
@@ -128,15 +139,17 @@ export default function BingoCard({ bingo, onReshuffle }) {
             isClicked={clickedTiles.includes(tile.name)}
           />
         ))}
-        <button onClick={onReshuffle}>Reshuffle Tiles</button>
-        <button onClick={() => setShowTileBackModal(true)}>Show modal</button>
 
         {showTileBackModal && <div className="overlay"></div>}
         {showTileBackModal && (
           <div className={modalClass}>
-            <p className="modalTitle">{modalTitle}</p>
-            <p className="modalText">{modalText}</p>
-            <button onClick={handleCloseModal}>Close</button>
+            <div className="bingoBackWrapper">
+              <CloseIcon onClick={handleCloseModal} />
+              <p className="modalTitle">{modalTitle}</p>
+
+              <p className="modalText">{modalText}</p>
+              {IconComponent && createElement(IconComponent, iconProps)}
+            </div>
           </div>
         )}
 
@@ -148,6 +161,10 @@ export default function BingoCard({ bingo, onReshuffle }) {
           </div>
         )}
       </div>
-    </>
+
+      <button className="refreshBtn" onClick={handleCloseWinModal}>
+        <img src="refresh.svg" alt="Nya brickor"></img>
+      </button>
+    </div>
   );
 }
