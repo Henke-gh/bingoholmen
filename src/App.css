@@ -119,6 +119,7 @@ body {
   text-align: center;
   margin: 0px;
   line-height: 15px;
+  text-transform: uppercase;
 }
 
 .tileLocation {
@@ -199,12 +200,14 @@ p.modalTitle {
   font-size: 32px;
   margin: 0;
   text-align: center;
+  text-transform: uppercase;
 }
 
 p.modalText {
   color: #000;
   font-family: var(--bongo-bread);
   padding-bottom: 50px;
+  text-align: left;
 }
 
 .bingoBackIcon {
