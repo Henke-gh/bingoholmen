@@ -13,7 +13,7 @@ export default function Home({ toggleInfoModal }) {
   };
 
   return (
-    <div>
+    <div className="homeWrapperBigContainer">
       <div className="homeContainer">
         <Header />
         <Stack direction="column" spacing={6} sx={{ width: "75%" }}>
@@ -26,7 +26,8 @@ export default function Home({ toggleInfoModal }) {
               fontSize: "2rem",
               width: "100%",
             }}
-            onClick={clickStartGame}>
+            onClick={clickStartGame}
+          >
             START
           </Button>
           <Button
@@ -37,7 +38,8 @@ export default function Home({ toggleInfoModal }) {
               fontFamily: "var(--bongo-font)",
               fontSize: "2rem",
             }}
-            onClick={toggleInfoModal}>
+            onClick={toggleInfoModal}
+          >
             OM SPELET
           </Button>
         </Stack>
