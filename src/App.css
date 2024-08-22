@@ -93,11 +93,13 @@ body {
   border-radius: 5px;
   border: var(--bongo-border);
   background-color: var(--bongo-tile);
+  color: var(--bongo-purple);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
   margin: 1px;
+  hyphens: auto;
 }
 
 .bingoTile.clicked {

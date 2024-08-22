@@ -74,12 +74,13 @@ export default function BingoCard({ bingo, onReshuffle }) {
       className: "bingoBackIcon",
       style: { fontSize: "58px" },
     });
-    setShowTileBackModal(true);
+
     setClickedTiles((prev) => {
       let newClickedTiles;
       if (prev.includes(name)) {
         newClickedTiles = prev.filter((tile) => tile !== name);
       } else {
+        setShowTileBackModal(true);
         newClickedTiles = [...prev, name];
         checkForWin(newClickedTiles);
       }
