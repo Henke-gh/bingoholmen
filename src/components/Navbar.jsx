@@ -6,15 +6,20 @@ import { Link } from "react-router-dom";
 export default function Navbar({ toggleInfoModal, showInfoModal }) {
   return (
     <div className="navbar">
-      <Link to={"/"}>
-        <IconButton sx={{ padding: "0px" }}>
+      <Link to={"/"} className="linkTagHome">
+        <IconButton
+          sx={{
+            padding: 0,
+            margin: 0,
+            width: "fit-content",
+            height: "fit-content",
+          }}>
           <HomeIcon
             sx={{
-              fontSize: "3.5rem",
+              fontSize: "3.3rem",
               color: "var(--bongo-yellow)",
-              marginLeft: "20px",
-              marginRight: "10px",
-              marginTop: "10px",
+              margin: 0,
+              padding: 0,
             }}
           />
         </IconButton>
@@ -22,16 +27,22 @@ export default function Navbar({ toggleInfoModal, showInfoModal }) {
       <div className="navHeader">
         <h2>BINGOHOLMEN</h2>
       </div>
-      <IconButton onClick={toggleInfoModal} sx={{ padding: "0px" }}>
+      <IconButton
+        onClick={toggleInfoModal}
+        sx={{
+          padding: 0,
+          margin: 0,
+          width: "fit-content",
+          height: "fit-content",
+        }}>
         <HelpOutlineIcon
           sx={{
-            fontSize: "3.5rem",
+            fontSize: "3.3rem",
             color: showInfoModal
               ? "var(--bongo-button-selected)"
               : "var(--bongo-yellow)",
-            marginLeft: "10px",
-            marginRight: "20px",
-            marginTop: "8px",
+            margin: 0,
+            padding: 0,
           }}
         />
       </IconButton>
