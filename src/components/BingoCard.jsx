@@ -2,6 +2,7 @@ import { useState, useEffect, createElement } from "react";
 import BingoSquare from "./BingoSquare";
 import * as Icons from "@mui/icons-material";
 import CloseIcon from "@mui/icons-material/Close";
+import { Button } from "@mui/material";
 
 export default function BingoCard({ bingo, onReshuffle }) {
   // state management for showing/hiding modal
@@ -158,7 +159,18 @@ export default function BingoCard({ bingo, onReshuffle }) {
         {showWinModal && (
           <div className="bingobongo">
             <img src="bingobongo.svg" alt="Bingo Bongo" />
-            <button onClick={handleCloseWinModal}>Play again</button>
+            <Button
+              variant="contained"
+              sx={{
+                backgroundColor: "var(--bongo-purple)",
+                color: "var(--bongo-yellow)",
+                fontFamily: "var(--bongo-font)",
+                fontSize: "2rem",
+              }}
+              onClick={handleCloseWinModal}
+            >
+              SPELA IGEN
+            </Button>
           </div>
         )}
       </div>
