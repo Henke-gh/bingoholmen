@@ -66,7 +66,8 @@ body {
 .navbar {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
+  align-items: center;
   width: 100vw;
   height: 72px;
   border-radius: 0px 0px 25px 25px;
@@ -241,4 +242,25 @@ p.modalText {
   width: 100vw;
   position: absolute;
   z-index: 2;
+}
+
+.bongoWinIcon {
+  scale: 0.6;
+}
+
+.linkTagHome {
+  height: fit-content;
+  width: fit-content;
+  padding: 0;
+}
+
+.homeBtn,
+.aboutBtn {
+  background-color: var(--bongo-purple);
+  box-shadow: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  width: fit-content;
+  height: fit-content;
 }
