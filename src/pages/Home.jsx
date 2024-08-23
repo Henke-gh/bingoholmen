@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { Stack } from "@mui/material";
 import { Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
@@ -8,10 +7,6 @@ import Header from "../components/Header.jsx";
 
 export default function Home({ toggleInfoModal }) {
   const navigate = useNavigate();
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
 
   const clickStartGame = () => {
     navigate("./bingo");
@@ -31,10 +26,25 @@ export default function Home({ toggleInfoModal }) {
               fontSize: "2rem",
               width: "100%",
             }}
+            onClick={clickStartGame}
           >
-            Start Game
+            START
+          </Button>
+          <Button
+            variant="contained"
+            sx={{
+              backgroundColor: "var(--bongo-purple)",
+              color: "var(--bongo-yellow)",
+              fontFamily: "var(--bongo-font)",
+              fontSize: "2rem",
+            }}
+            onClick={toggleInfoModal}
+          >
+            OM SPELET
           </Button>
         </Stack>
+      </div>
+      <div className="footerContainer">
         <Footer />
       </div>
     </div>
