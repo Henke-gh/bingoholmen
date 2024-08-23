@@ -75,11 +75,10 @@ export default function InfoModal({ toggleInfoModal }) {
           backgroundColor: "var(--bongo-purple)",
           color: "var(--bongo-yellow)",
           fontFamily: "var(--bongo-font)",
-          fontSize: "14px",
-          width: "70%",
+          fontSize: "24px",
+          width: "35%",
         }}
-        onClick={toggleInfoModal}
-      >
+        onClick={toggleInfoModal}>
         STÄNG
       </Button>
     </div>
