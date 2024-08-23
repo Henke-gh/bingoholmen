@@ -29,9 +29,9 @@ export default function InfoModal({ toggleInfoModal }) {
             tillhörande ruta.
           </p>
           <p className="twelvePX">
-            Då kan det visas en faktaruta om objektet eller platsen. Klicka ner
-            rutan genom att trycka på rutans text och fortsätt spela. Tävla
-            själv eller i lag och upptäck Lindholmen!
+            Du får då lite fakta om objektet eller platsen. Klicka ner rutan
+            genom att trycka på rutans text och fortsätt spela. Tävla själv
+            eller i lag och upptäck Lindholmen!
           </p>
         </article>
       </div>
