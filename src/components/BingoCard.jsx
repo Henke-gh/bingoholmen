@@ -2,6 +2,7 @@ import { useState, useEffect, createElement } from "react";
 import BingoSquare from "./BingoSquare";
 import * as Icons from "@mui/icons-material";
 import CloseIcon from "@mui/icons-material/Close";
+import { Button } from "@mui/material";
 
 export default function BingoCard({ bingo, onReshuffle }) {
   // state management for showing/hiding modal
@@ -125,6 +126,12 @@ export default function BingoCard({ bingo, onReshuffle }) {
     onReshuffle(); // reshuffle tiles for new game
   };
 
+  const handleOverlayClick = (e) => {
+    if (e.target.className === "overlay") {
+      handleCloseModal();
+    }
+  };
+
   return (
     <div className="bingoWrapperBigContainer">
       <h1 className="bingoHeadline">HITTA</h1>
@@ -141,10 +148,14 @@ export default function BingoCard({ bingo, onReshuffle }) {
           />
         ))}
 
-        {showTileBackModal && <div className="overlay"></div>}
+        {showTileBackModal && (
+          <div className="overlay" onClick={handleOverlayClick}></div>
+        )}
         {showTileBackModal && (
           <div className={modalClass}>
-            <div className="bingoBackWrapper">
+            <div
+              className="bingoBackWrapper"
+              onClick={(e) => e.stopPropagation()}>
               <CloseIcon onClick={handleCloseModal} />
               <p className="modalTitle">{modalTitle}</p>
 
@@ -154,7 +165,9 @@ export default function BingoCard({ bingo, onReshuffle }) {
           </div>
         )}
 
-        {showWinModal && <div className="overlay"></div>}
+        {showWinModal && (
+          <div className="overlay" onClick={handleOverlayClick}></div>
+        )}
         {showWinModal && (
           <div className="bingobongo">
             <img
