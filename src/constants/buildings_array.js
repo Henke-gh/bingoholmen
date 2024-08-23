@@ -92,8 +92,14 @@ const buildings = [
   {
     name: "SKULPTUR “Berättelser från de sju haven“",
     icon: "Waves",
-    text: "Längs promenadstråket vid Sannegårdskajen finns en konstgestaltning av Jill Lindström  i fyra delar, “Berättelser från de sju haven”. Som alla på något sätt har med havet och sjöfart att göra. Tillsammans bildar de en slags visuell berättelse. Vanna Bowles “Orädd resa” - Lindholmshamnen 19 består av tre verk som är utplacerade längs ett huvudstråk i området och på så sätt skapar en visuell förbindelse mellan bostadskvarteren.",
+    text: "Längs promenadstråket vid Sannegårdskajen finns en konstgestaltning av Jill Lindström  i fyra delar, “Berättelser från de sju haven”. Som alla på något sätt har med havet och sjöfart att göra. Tillsammans bildar de en slags visuell berättelse.",
     location: "Östra Sannegårdskajen",
+  },
+  {
+    name: "SKULPTUR “Orädd resa“",
+    icon: "Balcony",
+    text: "Vanna Bowles “Orädd resa” består av tre verk som är utplacerade längs ett huvudstråk i området och på så sätt skapar en visuell förbindelse mellan bostadskvarteren.",
+    location: "Lindholmshamnen 19",
   },
 ];
 
