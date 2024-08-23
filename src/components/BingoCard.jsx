@@ -134,6 +134,44 @@ export default function BingoCard({ bingo, onReshuffle }) {
 
   return (
     <div className="bingoWrapperBigContainer">
+      {showTileBackModal && (
+        <div className="overlay" onClick={handleOverlayClick}></div>
+      )}
+      {showTileBackModal && (
+        <div className={modalClass}>
+          <div
+            className="bingoBackWrapper"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <CloseIcon onClick={handleCloseModal} />
+            <p className="modalTitle">{modalTitle}</p>
+
+            <p className="modalText">{modalText}</p>
+            {IconComponent && createElement(IconComponent, iconProps)}
+          </div>
+        </div>
+      )}
+
+      {showWinModal && (
+        <div className="overlay" onClick={handleOverlayClick}></div>
+      )}
+      {showWinModal && (
+        <div className="bingobongo">
+          <img src="bongo-win.svg" alt="Bingo Bongo" className="bongoWinIcon" />
+          <Button
+            variant="contained"
+            sx={{
+              backgroundColor: "var(--bongo-purple)",
+              color: "var(--bongo-yellow)",
+              fontFamily: "var(--bongo-font)",
+              fontSize: "2rem",
+            }}
+            onClick={handleCloseWinModal}
+          >
+            SPELA IGEN
+          </Button>
+        </div>
+      )}
       <h1 className="bingoHeadline">HITTA</h1>
       <div className="bingoWrapper">
         {bingo.map((tile, index) => (
@@ -147,37 +185,6 @@ export default function BingoCard({ bingo, onReshuffle }) {
             isClicked={clickedTiles.includes(tile.name)}
           />
         ))}
-
-        {showTileBackModal && (
-          <div className="overlay" onClick={handleOverlayClick}></div>
-        )}
-        {showTileBackModal && (
-          <div className={modalClass}>
-            <div
-              className="bingoBackWrapper"
-              onClick={(e) => e.stopPropagation()}>
-              <CloseIcon onClick={handleCloseModal} />
-              <p className="modalTitle">{modalTitle}</p>
-
-              <p className="modalText">{modalText}</p>
-              {IconComponent && createElement(IconComponent, iconProps)}
-            </div>
-          </div>
-        )}
-
-        {showWinModal && (
-          <div className="overlay" onClick={handleOverlayClick}></div>
-        )}
-        {showWinModal && (
-          <div className="bingobongo">
-            <img
-              src="bongo-win.svg"
-              alt="Bingo Bongo"
-              className="bongoWinIcon"
-            />
-            <button onClick={handleCloseWinModal}>Play again</button>
-          </div>
-        )}
       </div>
       <button className="refreshBtn" onClick={handleCloseWinModal}>
         <img src="refresh.svg" alt="Nya brickor"></img>

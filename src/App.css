@@ -136,7 +136,7 @@ body {
 }
 
 .tileLocation {
-  font-size: 12px;
+  font-size: 11px;
   margin: 0px;
   text-align: center;
 }
@@ -144,7 +144,10 @@ body {
 .locationWrapper {
   width: 100%;
   height: 10px;
-  border-top: 3px solid var(--bongo-purple);
+  border-top: 2px solid var(--bongo-purple);
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
 }
 
 .bingoIcon {
@@ -263,4 +266,16 @@ p.modalText {
   margin: 0;
   width: fit-content;
   height: fit-content;
+}
+
+.smol-check {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+}
+
+@media screen and (max-width: 358px) {
+  p.tileName {
+    font-size: 13px;
+  }
 }
