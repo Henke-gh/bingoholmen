@@ -57,15 +57,15 @@
 }
 
 #topInfoSection {
-  width: 80%;
+  width: calc(80%);
   height: fit-content;
-  max-height: 35%;
+  max-height: 45%;
 }
 
 #bottomInfoSection {
-  width: 80%;
+  width: calc(80%);
   height: fit-content;
-  max-height: 30%;
+  max-height: 35%;
 }
 
 .infoModalHeader {
