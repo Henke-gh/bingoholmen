@@ -84,21 +84,6 @@ const items = [
     icon: "TwoWheeler",
     text: "Tysken Gottleib Daimler satte 1885 fast en motor på en cykel och fick en motorcykel. Vid 1900-talets början var motorcykeln ett sportredskap för rika unga män i storstäderna. Under 1930-talet blev den ett transportmedel för arbetarklassen. På 1950-talet symboliserade motorcykeln en ny ungdomskultur. Att äga en motorcykel säger något om vem du är.",
   },
-  {
-    name: "HAMNBASSÄNGEN",
-    icon: "Church",
-    text: "I hamnbassängen flyter en skulptur av Kent Karlsson, “Tempel för tvivel och hopp”. När verket först placerades stod det lite längre ut mot hamnkanalen, men efter en rejält blåsig dag i januari 2012 slet sig ”kyrkan”. Som tur var klarade den sig oskadd. Därefter flyttades den längre in i hamnbassängen där den står mer skyddad mot väder och vind.",
-  },
-  {
-    name: "SKULPTUR “Your 15 minutes of fame”",
-    icon: "ColorLens",
-    text: "Av Tina Frausin. Titeln på verket anspelar på Andy Warhols berömda uttalande om att alla kommer vara världsberömda 15 minuter i framtiden. Skulpturen är både ett konstverk, en scen och en sittplats. Placerat framför Backa Teater. “Gränslös tanke” av Eino Hanski. Mitt i Kunskapscentrum Lindholmen står ett fem meter högt torn, bestående av bokstäver, symboler, två hjul och geometriska former. Högst upp tronar en mänsklig hjärna.",
-  },
-  {
-    name: "SKULPTUR “Polaren”",
-    icon: "Diversity3",
-    text: "Av Charles Brånå. Denna skulptur ser ut att vara hämtad från en science fiction-film eller som något som lämnats kvar efter ett besök av utomjordingar. Stycka upp en rund glob i sex skivor och dra sedan isär delarna via en mittaxel, så uppstår denna ovala form.",
-  },
 ];
 
 export default items;
