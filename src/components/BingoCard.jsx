@@ -126,6 +126,12 @@ export default function BingoCard({ bingo, onReshuffle }) {
     onReshuffle(); // reshuffle tiles for new game
   };
 
+  const handleOverlayClick = (e) => {
+    if (e.target.className === "overlay") {
+      handleCloseModal();
+    }
+  };
+
   return (
     <div className="bingoWrapperBigContainer">
       <h1 className="bingoHeadline">HITTA</h1>
@@ -142,10 +148,15 @@ export default function BingoCard({ bingo, onReshuffle }) {
           />
         ))}
 
-        {showTileBackModal && <div className="overlay"></div>}
+        {showTileBackModal && (
+          <div className="overlay" onClick={handleOverlayClick}></div>
+        )}
         {showTileBackModal && (
           <div className={modalClass}>
-            <div className="bingoBackWrapper">
+            <div
+              className="bingoBackWrapper"
+              onClick={(e) => e.stopPropagation()}
+            >
               <CloseIcon onClick={handleCloseModal} />
               <p className="modalTitle">{modalTitle}</p>
 
@@ -155,7 +166,9 @@ export default function BingoCard({ bingo, onReshuffle }) {
           </div>
         )}
 
-        {showWinModal && <div className="overlay"></div>}
+        {showWinModal && (
+          <div className="overlay" onClick={handleOverlayClick}></div>
+        )}
         {showWinModal && (
           <div className="bingobongo">
             <img src="bingobongo.svg" alt="Bingo Bongo" />
