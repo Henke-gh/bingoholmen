@@ -157,7 +157,11 @@ export default function BingoCard({ bingo, onReshuffle }) {
         {showWinModal && <div className="overlay"></div>}
         {showWinModal && (
           <div className="bingobongo">
-            <img src="bingobongo.svg" alt="Bingo Bongo" />
+            <img
+              src="bongo-win.svg"
+              alt="Bingo Bongo"
+              className="bongoWinIcon"
+            />
             <button onClick={handleCloseWinModal}>Play again</button>
           </div>
         )}
