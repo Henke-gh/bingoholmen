@@ -56,13 +56,13 @@ const buildings = [
   {
     name: "Ganesha Temple",
     icon: "TempleHindu",
-    text: "På Kunskapsgatan på Lindholmen ligger det första Hindutemplet i Göteborg. Enligt en legend, fick Ganesha sitt huvud avhugget av sin far Shiva när han inte lät störa hans mor Parvatis bad. I och med sin ånger och ett ultimatum från sin hustru högg Shiva av en elefants huvud och använde det för att återge livet till sin son.",
+    text: "På Kunskapsgatan på Lindholmen ligger det första Hindutemplet i Göteborg. Enligt en legend, fick Ganesha sitt huvud avhugget av sin far Shiva när Ganesha inte lät störa sin mor Parvatis bad. I och med sin ånger och ett ultimatum från sin hustru högg Shiva av en elefants huvud och använde det för att återge livet till sin son.",
     location: "Kunskapsgatan 1",
   },
   {
     name: "Gothenburg Film Studios",
     icon: "Movie",
-    text: "Gothenburg Film Studios etablerades 2009 av ett gäng filmskapare. Sen dess har den växt till att bli centrum för kreativitet och eventkultur i Göteborg. De är förvånansvärt hemlighetsfulla.",
+    text: "Gothenburg Film Studios etablerades 2009 av ett gäng filmskapare. Sen dess har den växt till att bli centrum för kreativitet och eventkultur i Göteborg. De erbjuder både studio och utrustning till diverse filmprojekt och Filmstudion används frekvent som konsertarena. Under hösten 2024 uppträder bland andra Aqua, mest kända för hitlåten Barbie Girl.",
     location: "Kunskapsgatan 10",
   },
   {
@@ -78,19 +78,19 @@ const buildings = [
     location: "Lindholmsplatsen 1",
   },
   {
-    name: "SKULPTUR Medmänsklighet",
+    name: "SKULPTUR “Medmänsklighet“",
     icon: "Handshake",
     text: "Eino Hanskis konstverk “Medmänsklighet” är placerat på en torgliknande yta mellan gymnasiebyggnaderna på Lindholmen. En arm med en öppen hand pressar sig med så pass stor kraft ut ur ett stycke granit att stenen splittras. Ned i den öppna handen sprutar en stråle vatten från en fontän.",
     location: "Utvecklingsgatan 4",
   },
   {
-    name: "SKULPTUR Di-Edersekvensen",
+    name: "SKULPTUR “Di-Edersekvensen“",
     icon: "ClearAll",
     text: "Konstnären Gert Marcus skapade skissen till “Di-Edersekvensen” redan på 1960-talet, men verket realiserades långt senare, när Lindholmen gått från varvsområde till kunskapscentrum.",
     location: "Diagonalen",
   },
   {
-    name: "SKULPTUR Berättelser från de sju haven",
+    name: "SKULPTUR “Berättelser från de sju haven“",
     icon: "Waves",
     text: "Längs promenadstråket vid Sannegårdskajen finns en konstgestaltning av Jill Lindström  i fyra delar, “Berättelser från de sju haven”. Som alla på något sätt har med havet och sjöfart att göra. Tillsammans bildar de en slags visuell berättelse. Vanna Bowles “Orädd resa” - Lindholmshamnen 19 består av tre verk som är utplacerade längs ett huvudstråk i området och på så sätt skapar en visuell förbindelse mellan bostadskvarteren.",
     location: "Östra Sannegårdskajen",
